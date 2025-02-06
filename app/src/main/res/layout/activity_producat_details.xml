@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.product.ProducatDetailsActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_primary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivClose"
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitStart"
+                android:src="@drawable/ic_back_arrow"/>
+
+            <TextView
+                android:id="@+id/tv_toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="40dp"
+                android:layout_weight="0.8"
+                android:text="Product details"
+                android:gravity="start"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/ivWhatsApp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/whatspp"
+                android:scaleType="centerCrop"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_alignParentEnd="true" />
+
+            <FrameLayout
+                android:visibility="gone"
+                android:id="@+id/frame_layout_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:src="@drawable/cart_ic" />
+
+                <TextView
+                    android:id="@+id/cartCount"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="right|end|top"
+                    android:background="@drawable/cart_circle_round"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold"/>
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_6sdp"
+                app:cardElevation="8dp">
+                <ImageView
+                    android:id="@+id/ivProductImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    />
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvProductName"
+                        android:fontFamily="@font/lato_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:textColor="@color/color_primary"
+                        android:maxLines="2"
+                        android:text="***"
+                        android:textSize="@dimen/_19sdp"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRating"
+                        android:fontFamily="@font/lato_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/black"
+                        android:drawableStart="@drawable/ic_rating_star"
+                        android:textSize="15sp"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvOfferPrice"
+                                android:fontFamily="@font/lato_bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_17sdp"
+                                android:text="0000"/>
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvSalesprice"
+                                android:fontFamily="@font/lato_bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:text="000"
+                                android:textColor="@color/text_colour"
+                                android:textSize="@dimen/_16sdp"/>
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvStock"
+                            android:fontFamily="@font/lato_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Stock"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/_15sdp"/>
+
+                    </LinearLayout>
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/addtocartbtnLL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal"
+                        android:layout_alignParentEnd="true">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/minus_txt"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/minus" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/qty"
+                            style="@style/gotham_medium_11ssp_111111"
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_7sdp"
+                            android:gravity="center"
+                            android:text="1" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/plus"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/plus" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </RelativeLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:fontFamily="@font/lato_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:text="Description"
+                    android:padding="@dimen/_2sdp"
+                    android:textSize="15sp" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDescriptiion"
+                    android:fontFamily="@font/lato_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:text="***"
+                    android:padding="@dimen/_2sdp"
+                    android:textSize="@dimen/_12sdp" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:fontFamily="@font/lato_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:text="Information"
+                    android:padding="@dimen/_2sdp"
+                    android:textSize="15sp" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvInformation"
+                    android:fontFamily="@font/lato_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:text="***"
+                    android:padding="@dimen/_2sdp"
+                    android:textSize="@dimen/_12sdp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/addBtn"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/color_primary"
+        app:cardCornerRadius="@dimen/_150sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        app:cardElevation="@dimen/_5sdp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add to Cart"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            android:layout_gravity="center"/>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

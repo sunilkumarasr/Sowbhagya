@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_product_card"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_margin="@dimen/_5sdp"
+    android:orientation="vertical">
+
+   <!-- <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:outlineSpotShadowColor="@color/transparent"
+        app:cardCornerRadius="@dimen/_300sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_product"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:adjustViewBounds="true"
+            android:clickable="false"
+            android:forceHasOverlappingRendering="true"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitXY"
+            android:src="@drawable/plant_sample" />
+
+    </com.google.android.material.card.MaterialCardView>-->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:innerRadius="0dp"
+        android:shape="ring"
+        app:cardElevation="8dp"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="75dp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_product"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:adjustViewBounds="true"
+            android:clickable="false"
+            android:forceHasOverlappingRendering="true"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitXY"
+            android:src="@drawable/plant_sample"
+            android:layout_gravity="center"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_product"
+        style="@style/gotham_medium_11ssp_111111"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:gravity="center"
+        android:padding="@dimen/_2sdp"
+        android:textSize="16sp"
+        android:text="dfsfsf" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

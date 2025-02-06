@@ -1,0 +1,91 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SowbhagyaBiotech" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.SowbhagyaBiotech" parent="Theme.MaterialComponents.Light">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryVariant">@color/color_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/color_primary</item>
+        <item name="colorSecondaryVariant">@color/color_2F3031</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="tabText" parent="Widget.MaterialComponents.TabLayout">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textSize">10sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/lato_regular</item>
+        <item name="tabIndicatorColor">@color/black</item>
+        <item name="tabSelectedTextColor">@color/black</item>
+        <item name="tabTextColor">@color/text_colour</item>
+
+    </style>
+    <style name="Theme.SowbhagyaBiotech.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AlertDialogCustom" parent="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar.MinWidth">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <!-- <style name="Theme.SowbhagyaBiotech" parent="Base.Theme.SowbhagyaBiotech" />
+ -->
+    <style name="Theme.SowbhagyaBiotech.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.SowbhagyaBiotech.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="lato_bold_12ssp_2F3031">
+        <item name="android:fontFamily">@font/lato_regular</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textColor">@color/color_2F3031</item>
+
+    </style>
+
+    <style name="lato_semibold_12ssp_2F3031">
+        <item name="android:fontFamily">@font/lato_bold</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/color_2F3031</item>
+
+    </style>
+
+    <style name="gotham_medium_11ssp_2F3031">
+        <item name="android:fontFamily">@font/lato_regular</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/color_2F3031</item>
+    </style>
+
+    <style name="gotham_medium_11ssp_111111">
+        <item name="android:fontFamily">@font/lato_regular</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/color_111111</item>
+    </style>
+
+    <style name="lato_medium_16ssp_2F3031">
+        <item name="android:fontFamily">@font/lato_bold</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:textColor">@color/color_2F3031</item>
+    </style>
+
+    <style name="Widget.App.BottomAppBar" parent="">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomAppBar</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomAppBar" parent="">
+        <item name="colorSecondary">@color/color_primary</item>
+    </style>
+
+
+
+</resources>

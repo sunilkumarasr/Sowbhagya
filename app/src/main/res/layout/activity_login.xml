@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.authentication.LoginActivity"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/frameLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/login_banner" />
+<!--
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                >
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:paddingTop="10dp"
+                    android:id="@+id/llLoginTab"
+                    >
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/actvLogin"
+                        style="@style/gotham_medium_11ssp_2F3031"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/login"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"/>
+                    <View
+                        android:id="@+id/vLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/tab_select_color"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llRegistration"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:paddingTop="10dp"
+                    >
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/actRegistration"
+                        style="@style/gotham_medium_11ssp_2F3031"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/register"
+                        android:textStyle="bold"
+                        android:textColor="@color/tab_un_select_color"
+                        android:layout_gravity="center"/>
+                    <View
+                        android:id="@+id/vRegistration"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/tab_un_select_color"/>
+
+                </LinearLayout>
+            </LinearLayout>
+-->
+            <LinearLayout
+                android:id="@+id/llLoginForm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+               <!-- <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/gotham_medium_11ssp_2F3031"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:text="@string/email" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_15sdp">
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/mobileNumberET"
+                        style="@style/lato_bold_12ssp_2F3031"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/linear_backbround_for_mobile"
+                        android:hint="@string/enter_regisered_email_id"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="@dimen/_6sdp"
+                        android:textCursorDrawable="@drawable/cursor_color" />-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_edit_text"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mobileNumberET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_regisered_email_id"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/bg_edit_text"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+               <!-- </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/continuelogin"
+                    android:layout_width="@dimen/_170sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/rounded_button_submit"
+                    android:fontFamily="@font/lato_bold"
+                    android:textAllCaps="false"
+                    android:text="Login"
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:layout_marginTop="30dp">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/gotham_medium_11ssp_2F3031"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14sdp"
+                        android:text="@string/dont_have_an_account" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRegistration"
+                        style="@style/gotham_medium_11ssp_2F3031"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:textColor="@color/tab_hilet_color"
+                        android:textSize="@dimen/_14sdp"
+                        android:text="Register Now"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </LinearLayout>
+    </ScrollView>
+</layout>

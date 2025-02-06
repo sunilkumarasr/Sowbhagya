@@ -1,0 +1,113 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "211e50bbb28b43bfc28233439e193e57",
+    "entities": [
+      {
+        "tableName": "cart_items",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`cartID` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `user_id` TEXT, `deviceID` TEXT, `typeOfCart` TEXT, `stock` TEXT, `itemName` TEXT, `itemImage` TEXT, `cartQty` TEXT, `price` TEXT, `offer_price` TEXT, `product_id` TEXT, `createdDate` TEXT DEFAULT CURRENT_TIMESTAMP, `store_id` TEXT, `weight` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "cartID",
+            "columnName": "cartID",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "user_id",
+            "columnName": "user_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "deviceID",
+            "columnName": "deviceID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "typeOfCart",
+            "columnName": "typeOfCart",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "stock",
+            "columnName": "stock",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "itemName",
+            "columnName": "itemName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "itemImage",
+            "columnName": "itemImage",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "cartQty",
+            "columnName": "cartQty",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "price",
+            "columnName": "price",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer_price",
+            "columnName": "offer_price",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "product_id",
+            "columnName": "product_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdDate",
+            "columnName": "createdDate",
+            "affinity": "TEXT",
+            "notNull": false,
+            "defaultValue": "CURRENT_TIMESTAMP"
+          },
+          {
+            "fieldPath": "store_id",
+            "columnName": "store_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "weight",
+            "columnName": "weight",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "cartID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '211e50bbb28b43bfc28233439e193e57')"
+    ]
+  }
+}

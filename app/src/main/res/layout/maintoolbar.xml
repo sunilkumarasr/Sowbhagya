@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home_Activity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.SowbhagyaBiotech.AppBarOverlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/color_primary"
+            app:popupTheme="@style/Theme.SowbhagyaBiotech.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/new_app_icon_card"
+                    android:scaleType="centerCrop"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_toolbar_title"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="start"
+                    android:background="@drawable/top_logo_white"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_toolbar_title"
+                    android:layout_marginStart="@dimen/_10sdp"/>
+                <ImageView
+                    android:id="@+id/ivWhatsApp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/whatspp"
+                    android:scaleType="centerCrop"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:layout_alignParentEnd="true" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mobileHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Home"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <fragment
+        android:id="@+id/nav_host_fragment_activity_home"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_40sdp"
+        app:defaultNavHost="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/mobile_navigation" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

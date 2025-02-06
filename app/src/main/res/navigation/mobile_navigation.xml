@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+    <action
+        android:id="@+id/action_nav_home_to_nav_notification"
+        app:destination="@id/navigation_notification" />
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.biotech.sowbhagyabiotech.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_nav_home_to_nav_notification"
+            app:destination="@id/navigation_notification" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_cart"
+            app:destination="@id/navigation_cart" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_search"
+            app:destination="@id/navigation_search" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_categories"
+            app:destination="@id/navigation_category" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_account"
+            app:destination="@id/navigation_account" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notification"
+        android:name="com.biotech.sowbhagyabiotech.ui.notifications.NotificationsFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.biotech.sowbhagyabiotech.ui.search.SearchFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/navigation_cart"
+        android:name="com.biotech.sowbhagyabiotech.ui.cart.CartFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_mycart" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_notification"
+            app:destination="@id/navigation_notification" />
+    </fragment>
+   <!-- <fragment
+        android:label="Notifications"
+        android:id="@+id/action_nav_home_to_nav_notification"
+        android:name="biotechtech.sowbhagyabiotech.ui.notifications.NotificationsFragment"
+        />-->
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.biotech.sowbhagyabiotech.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/profile_screen" />
+    <fragment
+        android:id="@+id/navigation_subcategorytabs"
+        android:name="com.biotech.sowbhagyabiotech.ui.category.SubCategoryTabsFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_subcategory_tabs" />
+    <fragment
+        android:id="@+id/navigation_subcategory"
+        android:name="com.biotech.sowbhagyabiotech.ui.category.SubCategoryFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_subcategories" />
+    <fragment
+        android:id="@+id/navigation_category"
+        android:name="com.biotech.sowbhagyabiotech.ui.category.CategoryFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_categories" />
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="com.biotech.sowbhagyabiotech.ui.profile.AccountFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/account_screen" />
+
+    <fragment
+        android:id="@+id/navigation_addadress"
+        android:name="com.biotech.sowbhagyabiotech.ui.cart.UserAddressFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/editadresss_screen" />
+    <fragment
+        android:id="@+id/navigation_editaddadress"
+        android:name="com.biotech.sowbhagyabiotech.ui.cart.UserAddressFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/editadresss_screen" />
+    <fragment
+        android:id="@+id/navigation_getadresslist"
+        android:name="com.biotech.sowbhagyabiotech.ui.cart.UserAddressListFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/addresslist" />
+
+    <fragment
+        android:id="@+id/navigation_checkout"
+        android:name="com.biotech.sowbhagyabiotech.ui.cart.CheckoutFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/checkout_screen" />
+
+    <fragment
+        android:id="@+id/navigation_wishlist"
+        android:name="com.biotech.sowbhagyabiotech.ui.wishlist.WishListFragment"
+        android:label="WishList"
+        tools:layout="@layout/fragment_wishlist" />
+    <fragment
+        android:id="@+id/navigation_orders"
+        android:name="com.biotech.sowbhagyabiotech.ui.orders.OrdersFragment"
+        android:label="My Orders"
+        tools:layout="@layout/ordersfragment" />
+    <fragment
+        android:id="@+id/navigation_myaddress"
+        android:name="com.biotech.sowbhagyabiotech.ui.profile.MyAddressListFragment"
+        android:label="My Address"
+        tools:layout="@layout/addresslist" />
+    <fragment
+        android:id="@+id/navigation_product_details"
+        android:name="com.biotech.sowbhagyabiotech.ui.product.ProductDetailsFragment"
+        android:label="Product Details"
+        tools:layout="@layout/fragment_product_details" />
+
+</navigation>

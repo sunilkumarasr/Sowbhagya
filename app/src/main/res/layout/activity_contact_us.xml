@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/llCustomToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:orientation="horizontal"
+        android:background="@color/color_primary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivClose"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:scaleType="center"
+                android:src="@drawable/ic_back_arrow" />
+            <TextView
+                android:id="@+id/tv_toolbar_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="40dp"
+                android:layout_weight="0.8"
+                android:gravity="start"
+                android:text="Contact Us"
+                android:layout_centerInParent="true"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_toRightOf="@+id/ivClose"
+
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:layout_below="@+id/llCustomToolBar"><ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+
+           android:orientation="vertical">
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:id="@+id/frameLL"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent">
+
+
+
+               <androidx.appcompat.widget.AppCompatImageView
+                   android:layout_width="match_parent"
+                   android:layout_height="280dp"
+                   android:scaleType="fitXY"
+                   android:background="@drawable/img_contact_us" />
+
+
+               <LinearLayout
+                   android:id="@+id/llRegistrationForm"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical">
+
+
+
+                   <com.google.android.material.textfield.TextInputLayout
+                       android:id="@+id/tilName"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:background="@drawable/bg_edit_text"
+                       android:layout_margin="@dimen/activity_horizontal_margin"
+                       app:boxStrokeWidth="0dp"
+                       app:boxStrokeWidthFocused="0dp">
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:id="@+id/tieName"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:hint="@string/name"
+                           android:inputType="textCapSentences"
+                           android:background="@drawable/bg_edit_text"
+                           />
+                   </com.google.android.material.textfield.TextInputLayout>
+                   <com.google.android.material.textfield.TextInputLayout
+                       android:id="@+id/tilPhone"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:background="@drawable/bg_edit_text"
+                       android:layout_margin="@dimen/activity_horizontal_margin"
+                       app:boxStrokeWidth="0dp"
+                       app:boxStrokeWidthFocused="0dp">
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:id="@+id/tiePhone"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:hint="@string/phone"
+                           android:inputType="phone"
+                           android:maxLength="10"
+                           android:background="@drawable/bg_edit_text"
+                           />
+                   </com.google.android.material.textfield.TextInputLayout>
+                   <com.google.android.material.textfield.TextInputLayout
+                       android:id="@+id/tilEmail"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:background="@drawable/bg_edit_text"
+                       android:layout_margin="@dimen/activity_horizontal_margin"
+                       app:boxStrokeWidth="0dp"
+                       app:boxStrokeWidthFocused="0dp">
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:id="@+id/tieEmail"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:hint="@string/email"
+                           android:inputType="textEmailAddress"
+                           android:background="@drawable/bg_edit_text"
+                           />
+                   </com.google.android.material.textfield.TextInputLayout>
+                   <com.google.android.material.textfield.TextInputLayout
+                       android:id="@+id/tilSubject"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:background="@drawable/bg_edit_text"
+                       android:layout_margin="@dimen/activity_horizontal_margin"
+                       app:boxStrokeWidth="0dp"
+                       app:boxStrokeWidthFocused="0dp">
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:id="@+id/tieSubject"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:hint="@string/subject"
+                           android:inputType="textCapSentences"
+                           android:background="@drawable/bg_edit_text"
+                           />
+                   </com.google.android.material.textfield.TextInputLayout>
+
+                   <com.google.android.material.textfield.TextInputLayout
+                       android:id="@+id/tilMessage"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:background="@drawable/bg_edit_text"
+                       android:layout_margin="@dimen/activity_horizontal_margin"
+                       app:boxStrokeWidth="0dp"
+                       app:boxStrokeWidthFocused="0dp">
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:id="@+id/tieMessage"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:hint="@string/message"
+                           android:inputType="textMultiLine|none"
+                           android:maxLines="6"
+                           android:lines="6"
+                           android:gravity="start"
+                           android:background="@drawable/bg_edit_text"
+                           />
+                   </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                   <androidx.appcompat.widget.AppCompatButton
+                       android:id="@+id/btnContactUs"
+                       android:layout_width="@dimen/_170sdp"
+                       android:layout_height="@dimen/_35sdp"
+                       android:layout_gravity="center"
+                       android:layout_marginTop="@dimen/_9sdp"
+                       android:layout_marginBottom="@dimen/_15sdp"
+                       android:background="@drawable/rounded_button_submit"
+                       android:fontFamily="@font/lato_bold"
+                       android:text="@string/submit"
+                       android:textAllCaps="false"
+                       android:textColor="@color/white"
+                       />
+
+               </LinearLayout>
+
+
+
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+       </LinearLayout>
+   </ScrollView>
+
+   </LinearLayout>
+
+
+
+</RelativeLayout>
+
+
+
